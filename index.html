@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="myFunction()">
+    <audio id="myAudio">
+  <source src="correct_answer.mp3" type="audio/mpeg">
+</audio>
+    <audio id="myAudio1">
+  <source src="wrong_answer.mp3" type="audio/mpeg">
+</audio>
+    <center>
+        <H1 style="background-color:navy;font-size:80px">
+            <B><i>WELCOME TO KIDS ZONE</i></B>
+        </H1>
+            <div class="breaker">
+            </div>
+            <H2 style="background-color:navy">
+                <B><i>A REVOLUTIONARY DIGITAL JOURNEY FOR MAKING LEARNING EASY AND ENJOYABLE</B>
+                </i>
+            </H2>
+    </center>
+    <br><br>
+    <div id="container">
+        <div id="start">Start Quiz!</div>
+        <div id="quiz" style="display: none">
+            <div id="question"></div>
+            <div id="qImg"></div>
+            <div id="choices">
+                <div class="choice" id="A" onclick="checkAnswer('A'); playSound()"></div>
+                <div class="choice" id="B" onclick="checkAnswer('B'); playSound()"></div>
+                <div class="choice" id="C" onclick="checkAnswer('C'); playSound()"></div>
+                <center>
+                    <div class="choice" id="D" onclick="checkAnswer('D'); playsound()"></div>
+                </center>
+            </div>
+            <div id="timer">
+                <div id="counter"></div>
+                <div id="btimeGauge"></div>
+                <div id="timeGauge"></div>
+            </div>
+            <div id="progress"></div>
+        </div>
+        <div id="scoreContainer" style="display: none"></div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+
+</html>
